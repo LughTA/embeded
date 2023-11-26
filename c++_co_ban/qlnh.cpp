@@ -4,7 +4,7 @@
 using namespace std;
 
 int choice;
-
+//tao class bankaccount
 class BankAccount {
 protected:
 	int accnumber;
@@ -37,6 +37,7 @@ public:
 
 	}
 };
+//ham kiem tra nhap thong tin tu ban phim
 void check() {
 	while (1) {
 		if (choice == 1 || choice == 2 || choice == 3|| choice==4 ) {
