@@ -40,24 +40,24 @@ Nếu điều kiện sai (false), chương trình dừng lại và thông báo m
 Dùng trong debug, dùng #define NDEBUG để tắt debug\
 ![assert](https://github.com/LughTA/embeded/assets/121286723/f44cde5e-5e27-452c-82ca-3dc92295481e)
 ## Pointer
-**Pointer** là một biến lưu địa chỉ của biến khác 
+- **Pointer** là một biến lưu địa chỉ của biến khác 
 Kích thước con trỏ phụ thuộc hoàn toàn vào kiểu cấu trúc của máy tính (8 bit, 16bit, 32 bit, 64 bit,..)\
 ![khai bao con tro](https://github.com/LughTA/embeded/assets/121286723/be8d6c54-8a3a-4f74-ac24-d2e003647129)
-**Pointer to function (con trỏ hàm)**\
+- **Pointer to function (con trỏ hàm)**\
 Là một biến mà giữ địa chỉ của một hàm. Có nghĩa là, nó trỏ đến vùng nhớ trong bộ nhớ chứa mã máy của hàm được định nghĩa trong chương trình.\
 Trong ngôn ngữ lập trình C, con trỏ hàm cho phép bạn truyền một hàm như là một đối số cho một hàm khác, lưu trữ địa chỉ của hàm trong một cấu trúc dữ liệu, hoặc thậm chí truyền hàm như một giá trị trả về từ một hàm khác.\
 ![funtion pointer](https://github.com/LughTA/embeded/assets/121286723/d062d1de-8373-44be-a5e1-83d852cc59d8)
-**Void Pointer**  thường dùng để trỏ để tới bất kỳ địa chỉ nào mà không cần biết tới kiểu dữ liệu của giá trị tại địa chỉ đó.\
+- **Void Pointer**  thường dùng để trỏ để tới bất kỳ địa chỉ nào mà không cần biết tới kiểu dữ liệu của giá trị tại địa chỉ đó.\
 Cú pháp: **void** *ptr_void;\
-**Pointer to Constant** Là cách định nghĩa một con trỏ không thể thay đổi giá trị tại địa chỉ mà nó trỏ đến thông qua dereference nhưng giá trị tại địa chỉ đó có thể thay đổi.\
+- **Pointer to Constant** Là cách định nghĩa một con trỏ không thể thay đổi giá trị tại địa chỉ mà nó trỏ đến thông qua dereference nhưng giá trị tại địa chỉ đó có thể thay đổi.\
 Cú pháp:\
-![const pointer](https://github.com/LughTA/embeded/assets/121286723/b4d9f612-cf6d-4b14-9536-efb3aa16367b)\
-**Constant Pointer** Định nghĩa một con trỏ mà giá trị nó trỏ đến (địa chỉ ) không thể thay đổi. Tức là khi con trỏ này được khởi tạo thì nó sẽ không thể trỏ tới địa chỉ khác.
-![constan pointer](https://github.com/LughTA/embeded/assets/121286723/7a185510-2f23-40bc-b67b-b0cba1f8ba92)\
-**Pointer to Pointer**
-là một kiểu dữ liệu trong ngôn ngữ lập trình cho phép bạn lưu trữ địa chỉ của một con trỏ. Con trỏ đến con trỏ cung cấp một cấp bậc trỏ mới, cho phép bạn thay đổi giá trị của con trỏ gốc. Cấp bậc này có thể hữu ích trong nhiều tình huống, đặc biệt là khi bạn làm việc với các hàm cần thay đổi giá trị của con trỏ.
-![pointer to pointer](https://github.com/LughTA/embeded/assets/121286723/b61fde61-27de-418a-a0ab-9b31ab3ad69c)\
-**Null Pointer** là một con trỏ không trỏ đến bất kỳ đối tượng hoặc vùng nhớ cụ thể nào. Trong ngôn ngữ lập trình C, một con trỏ có thể được gán giá trị NULL để biểu diễn trạng thái null.\
+![const pointer](https://github.com/LughTA/embeded/assets/121286723/b4d9f612-cf6d-4b14-9536-efb3aa16367b)
+- **Constant Pointer** Định nghĩa một con trỏ mà giá trị nó trỏ đến (địa chỉ ) không thể thay đổi. Tức là khi con trỏ này được khởi tạo thì nó sẽ không thể trỏ tới địa chỉ khác.\
+![constan pointer](https://github.com/LughTA/embeded/assets/121286723/7a185510-2f23-40bc-b67b-b0cba1f8ba92)
+- **Pointer to Pointer**
+là một kiểu dữ liệu trong ngôn ngữ lập trình cho phép bạn lưu trữ địa chỉ của một con trỏ. Con trỏ đến con trỏ cung cấp một cấp bậc trỏ mới, cho phép bạn thay đổi giá trị của con trỏ gốc. Cấp bậc này có thể hữu ích trong nhiều tình huống, đặc biệt là khi bạn làm việc với các hàm cần thay đổi giá trị của con trỏ.\
+![pointer to pointer](https://github.com/LughTA/embeded/assets/121286723/b61fde61-27de-418a-a0ab-9b31ab3ad69c)
+- **Null Pointer** là một con trỏ không trỏ đến bất kỳ đối tượng hoặc vùng nhớ cụ thể nào. Trong ngôn ngữ lập trình C, một con trỏ có thể được gán giá trị NULL để biểu diễn trạng thái null.\
 Sử dụng null pointer thường hữu ích để kiểm tra xem một con trỏ đã được khởi tạo và có trỏ đến một vùng nhớ hợp lệ chưa. Tránh dereferencing (sử dụng giá trị mà con trỏ trỏ đến) một null pointer là quan trọng để tránh lỗi chương trình.\
 Tạo một con trỏ sau đó cho giá trị bằng Null là đc con trỏ Null. 
 ## Extern - Static - Volatile
