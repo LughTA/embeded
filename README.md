@@ -104,9 +104,9 @@ Sau đó nhét các thành phần khác vô từ từ với nguyên tắc là ch
 ![struct2](https://github.com/LughTA/embeded/assets/121286723/6b8d8778-cef3-495d-b395-2c5047306874)\
 Nếu bị thiếu chỗ thì tạo vùng nhớ mới sau đó nhét vô.\
 Như ví dụ là sẽ dư 1 ô trống vì thằng thứ 3 nó cần 4 byte nhưng chỉ còn như 1 byte k nhét đc phải tạo ms để nhét vô \
-![struct3](https://github.com/LughTA/embeded/assets/121286723/388b92b8-8daf-45b0-beca-40aa0c1a0643)\
-- **union** 
-**so sánh Struct và Union
+![struct3](https://github.com/LughTA/embeded/assets/121286723/388b92b8-8daf-45b0-beca-40aa0c1a0643)
+- **union** tương tụ như Struct nhưng tiết kiệm dữ liệu hơn
+**so sánh Struct và Union**
 Về mặt ý nghĩa, struct và union cơ bản giống nhau. Tuy nhiên, về mặt lưu trữ trong bộ nhớ, chúng có sự khác biệt rõ rệt như sau:
 •	struct: Dữ liệu của các thành viên của struct được lưu trữ ở những vùng nhớ khác nhau. Do đó kích thước của 1 struct tối thiểu bằng kích thước các thành viên cộng lại tại vì còn phụ thuộc vào bộ nhớ đệm (struct padding)
 •	Union : Dữ liệu các thành viên sẽ dùng chung 1 vùng nhớ. Kích thước của union được tính là kích thước lớn nhất của kiểu dữ liệu trong union. Việc thay đổi nội dung của 1 thành viên sẽ dẫn đến thay đổi nội dung của các thành viên khác
