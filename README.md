@@ -165,6 +165,39 @@ Về mặt ý nghĩa, struct và union cơ bản giống nhau. Tuy nhiên, về 
 •	Union : Dữ liệu các thành viên sẽ dùng chung 1 vùng nhớ. Kích thước của union được tính là kích thước lớn nhất của kiểu dữ liệu trong union. Việc thay đổi nội dung của 1 thành viên sẽ dẫn đến thay đổi nội dung của các thành viên khác
 
 ## Memory layout
+chương trình ban đầu sẽ đc lưu trên ổ cứng khi nào chạy chương trình nó sẽ đc lưu vô RAM để chạy, và cái RAM nó có cấu trúc như sau:\
+![memmory layout ](https://github.com/LughTA/embeded/assets/121286723/6ccac007-7e90-4798-a4b2-f0a1bb7d097b)
+- **Text** là một phần của bộ nhớ trong mô hình bộ nhớ của một chương trình máy tính, được sử dụng để lưu trữ mã máy của chương trình. Cụ thể, Text Segment chứa mã máy đã được biên dịch từ mã nguồn của chương trình và được CPU thực thi để thực hiện các hành động quy định trong chương trình.
+Quyền truy cập: Text Segment thường có quyền đọc và thực thi, nhưng không có quyền ghi. Điều này ngăn chặn chương trình việc tự sửa đổi mã máy của nó.\
+Kích thước cố định\
+Lưu Trữ Hằng Số
+- **Data** là một phần của bộ nhớ trong mô hình bộ nhớ của một chương trình máy tính, được sử dụng để lưu trữ dữ liệu tĩnh của chương trình. Dữ liệu tĩnh bao gồm biến toàn cục và biến tĩnh (static), tức là các biến mà không phụ thuộc vào thời gian chạy của chương trình\
+Trong phân vùng này đc chia làm hai phân vùng nhỏ hơn là bss và data:\
+data: Chứa các biến toàn cục và biến tĩnh được khởi tạo với giá trị
+khác 0.\
+bss: Chứa các biến toàn cục và biến tĩnh chưa được khởi tạo với giá trị
+hoặc bằngbằng 0.\
+- **Stack** là một phần quan trọng của bộ nhớ trong mô hình bộ nhớ của một chương trình máy tính. Nó được sử dụng để lưu trữ các biến cục bộ, các tham số truyền vào và các giá trị trả về từ hàm.
+Quyền truy cập: Bộ nhớ trên Stack thường có quyền đọc và
+ghi, nghĩa là dữ liệu có thể được đọc và sửa đổi trong suốt thời
+gian chương trình chạy.\
+Chứa các biến cục bộ, tức là các biến được khai báo trong các
+hàm và chỉ có giá trị trong phạm vi của hàm đó.\
+Kích thước cố định: phụ thuộc vào hệ điều hành, đối với
+Windows thường là 1MB, Linux là 8MB
+- **Heap** là một phần của bộ nhớ trong mô hình bộ nhớ của một chương trình máy tính, được sử dụng để cấp phát bộ nhớ động. Các biến được cấp phát trên heap không có kích thước xác định tại thời điểm biên dịch và có thể được quản lý động trong quá trình thực thi của chương trình
+Quyền truy cập Bộ nhớ trên heap thường có quyền đọc và ghi,
+nghĩa là dữ liệu có thể được đọc và sửa đổi trong suốt thời gian
+chương trình chạy.\
+Kích Thước Thay Đổi: Kích thước của heap có thể thay đổi
+trong quá trình thực thi của chương trình, tùy thuộc vào các
+thao tác cấp phát và giải phóng bộ nhớ.\
+Không Giữ Giá Trị Mặc Định: Bộ nhớ trên heap không giữ giá
+trị mặc định như trong Data Segment. Nếu không được khởi
+tạo, giá trị của biến trên heap sẽ không xác định
+- **So sánh Stack và Heap:**
+Bộ nhớ Stack được dùng để lưu trữ các biến cục bộ trong hàm, tham số truyền vào... Truy cập vào bộ nhớ này rất nhanh và được thực thi khi chương trình được biên dịch. Dữ liệu được lưu trong Stack sẽ tự động hủy khi hàm thực hiện xong công việc của mình.\
+Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến con trỏ được cấp phát động bởi các hàm malloc - calloc - realloc (trong C.Nếu bạn liên tục cấp phát vùng nhớ mà không giải phóng thì sẽ bị lỗi tràn vùng nhớ Heap (Heap overflow).
 
 ## JSON
 
