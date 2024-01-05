@@ -75,7 +75,60 @@ Trong ngôn ngữ lập trình C, từ khóa register được sử dụng để
 Tuy nhiên, lưu ý rằng việc sử dụng register chỉ là một đề xuất cho trình biên dịch và không đảm bảo rằng biến sẽ được lưu trữ trong thanh ghi. Trong thực tế, trình biên dịch có thể quyết định không tuân thủ lời đề xuất này(tại dễ làm tràn bộ nhớ gây sai lệch trong vi điều khiển)
 
 ## Goto - setjmp.h
+- **Goto** là một từ khóa trong ngôn ngữ lập trình C, cho phép chương trình nhảy đến một nhãn (label) đã được đặt trước đó trong cùng một hàm. Mặc dù nó cung cấp khả năng kiểm soát flow của chương trình, nhưng việc sử dụng goto thường được xem là không tốt vì nó có thể làm cho mã nguồn trở nên khó đọc và khó bảo trì.
+ví dụ:
+~~~
+#include <stdio.h>
+int main() {
+int i = 0;
+// Đặt nhãn
+start:
+if (i >= 5) {
+goto end; // Chuyển control đến nhãn "end"
+}
+printf("%d ", i);
+i++;
+goto start; // Chuyển control đến nhãn "start"
+// Nhãn "end"
+end:
+printf("\n");
+return 0;
+}
+~~~
+- **setjmp.h** là một thư viện trong ngôn ngữ lập trình C, cung cấp hai hàm chính là setjmp và longjmp. Cả hai hàm này thường được sử dụng để thực hiện xử lý ngoại lệ trong C, mặc dù nó không phải là một cách tiêu biểu để xử lý ngoại lệ trong ngôn ngữ này\
+~~~
+#include <stdio.h>
+#include <setjmp.h>
 
+jmp_buf buf;
+int exception_code;
+
+double divide(int a, int b) {
+    if (b == 0) {
+        longjmp(buf, 1 ); // Mã lỗi 1 cho lỗi chia cho 0
+    }
+    return (double)a / b;
+}
+
+int main() {
+    int a = 10;
+    int b = 0;
+    double result = 0.0;
+
+    if ((exception_code = setjmp(buf)) == 0)  {
+        result = divide(a, b);
+        printf("Result: %f\n", result);
+    }
+    else if (exception_code == (x))  {
+        printf("Error: Divide by 0!\n");
+    }
+
+
+    // Các xử lý khác của chương trình
+    return 0;
+}
+
+~~~
 ## Bitmask
 Là kỹ thuật để thao tác vớicác bit\
 Bitmask thường được sử dụng để tối ưu hóa bộ nhớ, thực hiện các phép toán logic
