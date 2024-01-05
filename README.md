@@ -95,6 +95,14 @@ Các phép toán:\
 - Shift left và Shift right: dịch bit qua trái hoặc phải
  
 ## Struct - Union
+- **Struct** là cấu trúc dữ liệu được định nghĩa dựa trên các kiểu dữ liệu đã có sẵn
+- kích thước: tổng kích thước của các thành phần bên trong
+ cách tính kich thước như sau:
+đầu tiên sẽ quét coi kich thước của thành phần nào lớn nhất sao đó tạo ra vùng lưu trữ bằng với kich thước của thành phần đó
+sau đó nhét các thành phần khác vô từ từ với nguyên tắc là chỗ còn trống phải đủ để nhét thì ms nhét.\
+Nếu bị thiếu chỗ thì tạo vùng nhớ mới sau đó nhét vô.\
+như ví dụ là sẽ dư 1 ô trống vì thằng thư 3 nó cần 4 byte nhưng chỉ còn như 1 byte k nhét đc phải tạo ms
+- **union** 
 **so sánh Struct và Union
 Về mặt ý nghĩa, struct và union cơ bản giống nhau. Tuy nhiên, về mặt lưu trữ trong bộ nhớ, chúng có sự khác biệt rõ rệt như sau:
 •	struct: Dữ liệu của các thành viên của struct được lưu trữ ở những vùng nhớ khác nhau. Do đó kích thước của 1 struct tối thiểu bằng kích thước các thành viên cộng lại tại vì còn phụ thuộc vào bộ nhớ đệm (struct padding)
