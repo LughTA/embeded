@@ -85,12 +85,12 @@ một đối tượng\
 (c là số thứ 2 hoặc có thể là số lần đối với phép dịch bit)\
 Các phép toán:\
 - NOT bitwise: 1>0, 0>1
-- AND bitwise:
+- AND bitwise:\
 ![and](https://github.com/LughTA/embeded/assets/121286723/901990c8-0556-40b6-9d95-ef78aa293826)
-- OR bitwise:
+- OR bitwise:\
 ![or](https://github.com/LughTA/embeded/assets/121286723/1a3b44c2-a4d5-4ed2-895f-9a36096295c8)
 
-- XOR bitwise:
+- XOR bitwise:\
 ![xor](https://github.com/LughTA/embeded/assets/121286723/b17fdb2d-fa59-4bfb-9232-d2acf0323559)
 - Shift left và Shift right: dịch bit qua trái hoặc phải
  
