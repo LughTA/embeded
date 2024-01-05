@@ -5,10 +5,10 @@
 
 # Kiến thức C
 ## Compiler-macro
-- Compiler là quá trình máy tính dịch từ ngôn ngữ lập trình qua ngôn ngữ máy:\
+- **Compiler** là quá trình máy tính dịch từ ngôn ngữ lập trình qua ngôn ngữ máy:\
 ![compiler](https://github.com/LughTA/embeded/assets/121286723/8f9462e6-7368-442e-870e-c831c5a12014)
 ![compiler prosess](https://github.com/LughTA/embeded/assets/121286723/6462c7d3-f450-4cae-b414-2d9bd4a79e03)
-- Macro là từ dùng để chỉ những thông tin được xử lý ở quá trình tiền xử lý ( Preprocessor). hiểu nôm na là cái j mà ở bước tiền xử lý làm thì sẽ gọi là macro. 
+- **Macro** là từ dùng để chỉ những thông tin được xử lý ở quá trình tiền xử lý ( Preprocessor). hiểu nôm na là cái j mà ở bước tiền xử lý làm thì sẽ gọi là macro. 
 Chia làm 3 nhóm chính:
 + #include: chèn nội dung từ một file khác vô chương trình
 + #define, #undef định nghĩa một đoạn code thuận tiện cho xài sau này. cái undef dùng để hủy nội dung của define đã tạo trước đó.
@@ -26,8 +26,21 @@ vd:
 
 
 ## Stdarg-assert
-
+**Thư viện Stdarg:** Cung cấp các phương thức để làm việc với các hàm có số lượng input parameter không cố định.\
+Các hàm hữu ích trong thư viện: 
+- va_list: là một kiểu dữ liệu để đại diện cho danh sách các đối số biến đổi.
+- va_start: Bắt đầu một danh sách đối số biến đổi. Nó cần được gọi trước khi truy cập các đối số biến đổi đầu tiên.
+- va_arg: Truy cập một đối số trong danh sách. Hàm này nhận một đối số của kiểu được xác định bởi tham số thứ hai
+- va_end: Kết thúc việc sử dụng danh sách đối số biến đổi. Nó cần được gọi trước khi kết thúc hàm.
+![STDARG](https://github.com/LughTA/embeded/assets/121286723/569182c2-5b49-4b2c-8483-16b4e975ae83)
+**Thư viện assert** Cung cấp macro assert.\
+Macro này được sử dụng để kiểm tra một điều kiện. 
+Nếu điều kiện đúng (true), không có gì xảy ra và chương trình tiếp tục thực thi.\
+Nếu điều kiện sai (false), chương trình dừng lại và thông báo một thông điệp lỗi.\
+Dùng trong debug, dùng #define NDEBUG để tắt debug\
+![assert](https://github.com/LughTA/embeded/assets/121286723/f44cde5e-5e27-452c-82ca-3dc92295481e)
 ## Pointer
+**Pointer** là một biến lưu địa chỉ của biến khác 
 
 ## Extern - Static - Volatile
 
