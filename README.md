@@ -5,7 +5,7 @@
 
 # Kiến thức C
 ## Compiler-macro
-- Compiler là quá trình máy tính dịch từ ngôn ngữ lập trình qua ngôn ngữ máy:
+- Compiler là quá trình máy tính dịch từ ngôn ngữ lập trình qua ngôn ngữ máy:\
 ![compiler](https://github.com/LughTA/embeded/assets/121286723/8f9462e6-7368-442e-870e-c831c5a12014)
 ![compiler prosess](https://github.com/LughTA/embeded/assets/121286723/6462c7d3-f450-4cae-b414-2d9bd4a79e03)
 - Macro là từ dùng để chỉ những thông tin được xử lý ở quá trình tiền xử lý ( Preprocessor). hiểu nôm na là cái j mà ở bước tiền xử lý làm thì sẽ gọi là macro. 
