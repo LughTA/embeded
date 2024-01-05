@@ -50,13 +50,13 @@ Trong ngôn ngữ lập trình C, con trỏ hàm cho phép bạn truyền một 
 **Void Pointer**  thường dùng để trỏ để tới bất kỳ địa chỉ nào mà không cần biết tới kiểu dữ liệu của giá trị tại địa chỉ đó.\
 Cú pháp: **void** *ptr_void;\
 **Pointer to Constant** Là cách định nghĩa một con trỏ không thể thay đổi giá trị tại địa chỉ mà nó trỏ đến thông qua dereference nhưng giá trị tại địa chỉ đó có thể thay đổi.\
-Cú pháp:
-![const pointer](https://github.com/LughTA/embeded/assets/121286723/b4d9f612-cf6d-4b14-9536-efb3aa16367b)
+Cú pháp:\
+![const pointer](https://github.com/LughTA/embeded/assets/121286723/b4d9f612-cf6d-4b14-9536-efb3aa16367b)\
 **Constant Pointer** Định nghĩa một con trỏ mà giá trị nó trỏ đến (địa chỉ ) không thể thay đổi. Tức là khi con trỏ này được khởi tạo thì nó sẽ không thể trỏ tới địa chỉ khác.
-![constan pointer](https://github.com/LughTA/embeded/assets/121286723/7a185510-2f23-40bc-b67b-b0cba1f8ba92)
+![constan pointer](https://github.com/LughTA/embeded/assets/121286723/7a185510-2f23-40bc-b67b-b0cba1f8ba92)\
 **Pointer to Pointer**
 là một kiểu dữ liệu trong ngôn ngữ lập trình cho phép bạn lưu trữ địa chỉ của một con trỏ. Con trỏ đến con trỏ cung cấp một cấp bậc trỏ mới, cho phép bạn thay đổi giá trị của con trỏ gốc. Cấp bậc này có thể hữu ích trong nhiều tình huống, đặc biệt là khi bạn làm việc với các hàm cần thay đổi giá trị của con trỏ.
-![pointer to pointer](https://github.com/LughTA/embeded/assets/121286723/b61fde61-27de-418a-a0ab-9b31ab3ad69c)
+![pointer to pointer](https://github.com/LughTA/embeded/assets/121286723/b61fde61-27de-418a-a0ab-9b31ab3ad69c)\
 **Null Pointer** là một con trỏ không trỏ đến bất kỳ đối tượng hoặc vùng nhớ cụ thể nào. Trong ngôn ngữ lập trình C, một con trỏ có thể được gán giá trị NULL để biểu diễn trạng thái null.\
 Sử dụng null pointer thường hữu ích để kiểm tra xem một con trỏ đã được khởi tạo và có trỏ đến một vùng nhớ hợp lệ chưa. Tránh dereferencing (sử dụng giá trị mà con trỏ trỏ đến) một null pointer là quan trọng để tránh lỗi chương trình.\
 Tạo một con trỏ sau đó cho giá trị bằng Null là đc con trỏ Null. 
