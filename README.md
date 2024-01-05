@@ -97,11 +97,14 @@ Các phép toán:\
 ## Struct - Union
 - **Struct** là cấu trúc dữ liệu được định nghĩa dựa trên các kiểu dữ liệu đã có sẵn
 - kích thước: tổng kích thước của các thành phần bên trong
- cách tính kich thước như sau:
-đầu tiên sẽ quét coi kich thước của thành phần nào lớn nhất sao đó tạo ra vùng lưu trữ bằng với kich thước của thành phần đó
-sau đó nhét các thành phần khác vô từ từ với nguyên tắc là chỗ còn trống phải đủ để nhét thì ms nhét.\
+ cách tính kich thước như sau:\
+Đầu tiên sẽ quét coi kich thước của thành phần nào lớn nhất sao đó tạo ra vùng lưu trữ bằng với kich thước của thành phần đó\
+![struct1](https://github.com/LughTA/embeded/assets/121286723/4d91c8f8-aad2-41ee-8df4-7402287272a9)\
+Sau đó nhét các thành phần khác vô từ từ với nguyên tắc là chỗ còn trống phải đủ để nhét thì ms nhét.\
+![struct2](https://github.com/LughTA/embeded/assets/121286723/6b8d8778-cef3-495d-b395-2c5047306874)\
 Nếu bị thiếu chỗ thì tạo vùng nhớ mới sau đó nhét vô.\
-như ví dụ là sẽ dư 1 ô trống vì thằng thư 3 nó cần 4 byte nhưng chỉ còn như 1 byte k nhét đc phải tạo ms
+Như ví dụ là sẽ dư 1 ô trống vì thằng thứ 3 nó cần 4 byte nhưng chỉ còn như 1 byte k nhét đc phải tạo ms để nhét vô \
+![struct3](https://github.com/LughTA/embeded/assets/121286723/388b92b8-8daf-45b0-beca-40aa0c1a0643)\
 - **union** 
 **so sánh Struct và Union
 Về mặt ý nghĩa, struct và union cơ bản giống nhau. Tuy nhiên, về mặt lưu trữ trong bộ nhớ, chúng có sự khác biệt rõ rệt như sau:
