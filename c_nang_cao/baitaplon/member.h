@@ -2,7 +2,7 @@
 * File: member.h
 * Author:Nguyen Thai Tuan Anh
 * Date: 20/1/2024
-* Description: libary for file main.c 
+* Description: this is header file for declare functions and defines structs use in file main.c
 */
 
 
@@ -25,6 +25,9 @@ typedef struct MemberNode {
     struct MemberNode* next;
 } MemberNode;
 
+/*
+* Description: declare functions
+*/
 MemberNode* createMemberNode(Member member);
 
 void addMember(const char* filename, Member member);
