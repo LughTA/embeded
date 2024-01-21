@@ -1,9 +1,10 @@
 
-# C Nâng cao 
+#C Nâng cao
 
 ở đây sẽ lưu hết các kiếm thức đã học, theo cách ta hiểu
+<details>
+<summary># Kiến thức C:</summary>
 
-# Kiến thức C
 ## Compiler-macro
 - **Compiler** là quá trình máy tính dịch từ ngôn ngữ lập trình qua ngôn ngữ máy:\
 ![compiler](https://github.com/LughTA/embeded/assets/121286723/8f9462e6-7368-442e-870e-c831c5a12014)
@@ -204,8 +205,11 @@ Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến c
 ## Linked List
 
 ## Stack - Queue
+<details>
+    
+<details>
+    <summary># # Kiến thức C++:</summary>
 
-# Kiến thức C++
 
 
 
