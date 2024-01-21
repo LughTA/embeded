@@ -211,7 +211,20 @@ Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến c
     <summary> Kiến thức C++:</summary>
     
 ## Class
-
+Lớp là một cấu trúc dữ liệu tự định nghĩa có thể chứa dữ liệu và các hàm thành viên liên quan.
+~~~
+class ClassName {
+private:
+    // Các thành phần riêng tư (private) chỉ có thể truy cập bên trong lớp
+    // Dữ liệu thành viên, hàm thành viên, ...protected:
+    // Các thành phần bảo vệ (protected) tương tự như private, nhưng có thể truy cập từ lớp kế thừa
+public:
+    // Các thành phần công khai (public) được truy cập từ bên ngoài lớp
+    // Dữ liệu thành viên, hàm thành viên, ...
+    // Hàm thành viên và các phương thức khác có thể được định nghĩa tại đây
+    // ...
+};
+~~~
 ## Constructor
 
 ## Destructor
