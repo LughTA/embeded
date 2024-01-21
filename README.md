@@ -205,11 +205,11 @@ Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến c
 ## Linked List
 
 ## Stack - Queue
-<details>
+</details>
     
 <details>
     <summary># # Kiến thức C++:</summary>
-
+</details>
 
 
 
