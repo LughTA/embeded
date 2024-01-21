@@ -216,7 +216,8 @@ Lớp là một cấu trúc dữ liệu tự định nghĩa có thể chứa d�
 class ClassName {
 private:
     // Các thành phần riêng tư (private) chỉ có thể truy cập bên trong lớp
-    // Dữ liệu thành viên, hàm thành viên, ...protected:
+    // Dữ liệu thành viên, hàm thành viên, ...
+protected:
     // Các thành phần bảo vệ (protected) tương tự như private, nhưng có thể truy cập từ lớp kế thừa
 public:
     // Các thành phần công khai (public) được truy cập từ bên ngoài lớp
@@ -225,11 +226,12 @@ public:
     // ...
 };
 ~~~
-## Constructor
+- **Constructor** là một method sẽ được tự động gọi khi khởi tạo object. Constructor sẽ có tên trùng với tên của class.
 
-## Destructor
 
-## Static keyword
+- **Destructor**
+
+- **Static keyword**
 
 </details>
 
