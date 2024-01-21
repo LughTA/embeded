@@ -209,9 +209,13 @@ Bộ nhớ Heap được dùng để lưu trữ vùng nhớ cho những biến c
     
 <details>
     <summary> Kiến thức C++:</summary>
+    
 ## Class
+
 ## Constructor
+
 ## Destructor
+
 ## Static keyword
 
 </details>
