@@ -13,8 +13,8 @@ using namespace std;
 #define TURN_ON_AIR  5
 #define TURN_OFF_AIR 6
 
-extern Air_condition_status air_status;
-extern Air_mode air_mode;
+Air_condition_status air_status;
+Air_mode air_mode;
 mutex mtx_sensor_outside, mtx_sensor_inside, mtx_cout, mtx_sensor_wind, mtx_key_input;
 double sensor_outside;
 double sensor_inside = 16;
